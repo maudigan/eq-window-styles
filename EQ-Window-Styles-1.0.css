@@ -1,0 +1,636 @@
+/*************************************************************************** 
+ * 
+ *   This program is free software; you can redistribute it and/or modify 
+ *   it under the terms of the GNU General Public License as published by 
+ *   the Free Software Foundation; either version 2 of the License, or 
+ *   (at your option) any later version. 
+ * 
+ *   Portions of this program are derived from publicly licensed software 
+ *   projects including, but not limited to phpBB, Magelo Clone, 
+ *   EQEmulator, EQEditor, and Allakhazam Clone. 
+ * 
+ *                                  Author: 
+ *                           Maudigan(Airwalking) 
+ * 
+ *                      
+ ***************************************************************************/ 
+
+
+
+
+
+
+/* ----------------------------------------------
+              checkboxes on flags/corpses
+-------------------------------------------------*/
+.CB_CheckBox_0 {
+  background-image:url(./images/check_0.png);
+  display: inline-block;
+}
+.CB_CheckBox_1 {  
+  background-image:url(./images/check_1.png);
+}
+.CB_CheckBox_0,
+.CB_CheckBox_1 {  
+   height: 16px;
+   min-width: 16px;
+   margin: 1px;
+   padding: 1px;
+   display: inline-block;
+   background-repeat: no-repeat;
+}
+.CB_CheckBox_0 SPAN,
+.CB_CheckBox_1 SPAN,
+.CB_CheckBox_0 A,
+.CB_CheckBox_1 A {  
+   padding-left: 20px;
+}
+
+
+/* ----------------------------------------------
+        tab box on various super fancy
+------------------------------------------------- */
+NAV.CB_Tab_Box UL {
+   display: flex;
+   margin-top: 15px;
+   margin-bottom: 20px;
+   margin-left: 0px;
+   margin-right: 0px;
+   padding: 0px;
+}
+
+NAV.CB_Tab_Box UL LI {
+   cursor: pointer;
+   list-style-type: none;
+   flex-grow: 1;
+   text-align: center;
+   border-top: 1px solid #858996;
+   border-bottom: 2px solid #575139;
+   border-left: 1px solid #40434e;
+   border-right: 1px solid #858996;
+   border-top-right-radius: 15px;
+   border-top-left-radius: 15px;    
+   color: #808080;
+   background-color: rgba(255,255,255,0.0);
+}
+
+NAV.CB_Tab_Box UL LI:hover {  
+   color: #ffffff;
+   background-color: rgba(255,255,255,0.2);
+}
+
+NAV.CB_Tab_Box UL LI.CB_Tab_Open {
+   cursor: default;
+   border-top: 2px solid #949187;
+   border-bottom: none;
+   border-left: 2px solid #8a7d4a;
+   border-right: 2px solid #949187;
+   background-color: rgba(255,255,255,0.0);
+   color: #ffffff;
+}
+
+NAV.CB_Tab_Box UL LI.CB_Tab_Open:hover {
+   cursor: default;
+   background-color: rgba(255,255,255,0.0);
+}
+
+
+
+/* ----------------------------------------------
+            tab box on various pages
+------------------------------------------------- */
+NAV.CB_Tab_Box UL {
+   display: flex;
+   margin-top: 15px;
+   margin-bottom: 20px;
+   margin-left: 0px;
+   margin-right: 0px;
+   padding: 0px;
+}
+
+NAV.CB_Tab_Box UL LI {
+   cursor: pointer;
+   list-style-type: none;
+   flex-grow: 1;
+   text-align: center;
+   border-top: 1px solid #858996;
+   border-bottom: 2px solid #575139;
+   border-left: 1px solid #40434e;
+   border-right: 1px solid #858996;
+   border-top-right-radius: 15px;
+   border-top-left-radius: 15px;    
+   color: #808080;
+   background-color: rgba(255,255,255,0.0);
+}
+
+NAV.CB_Tab_Box UL LI:hover {  
+   color: #ffffff;
+   background-color: rgba(255,255,255,0.2);
+}
+
+NAV.CB_Tab_Box UL LI.CB_Tab_Open {
+   cursor: default;
+   border-top: 2px solid #949187;
+   border-bottom: none;
+   border-left: 2px solid #8a7d4a;
+   border-right: 2px solid #949187;
+   background-color: rgba(255,255,255,0.0);
+   color: #ffffff;
+}
+
+NAV.CB_Tab_Box UL LI.CB_Tab_Open:hover {
+   cursor: default;
+   background-color: rgba(255,255,255,0.0);
+}
+
+
+
+/* ----------------------------------------------
+     tab box on various super fancy windows
+------------------------------------------------- */
+.WindowSuperFancy NAV.CB_Tab_Box UL {
+   display: flex;
+   margin-top: 15px;
+   margin-bottom: 20px;
+   margin-left: -18px;
+   margin-right: -18px;
+   padding-bottom: 7px;
+   padding-top: 0px;
+   padding-right: 8px;
+   padding-left: 8px;
+   height: 28px; 
+   background-image: url(./images/cb_tab_l.png), 
+                     url(./images/cb_tab_r.png);
+   background-repeat: no-repeat,
+                      no-repeat;
+   background-position-x: left, 
+                          right;
+   background-position-y: bottom, 
+                          bottom; 
+   background-clip: padding-box, 
+                    padding-box;
+}
+
+.WindowSuperFancy NAV.CB_Tab_Box UL LI {
+   cursor: pointer;
+   list-style-type: none;
+   flex-grow: 1;
+   text-align: center;
+   border-width: 0px;   
+   color: #808080;
+   padding: 0px 20px;
+   height: 28px;
+   white-space: nowrap;
+   line-height: 36px;
+   background-image: url(./images/cb_tab_down_l.png), 
+                     url(./images/cb_tab_down_r.png),  
+                     url(./images/cb_tab_down_t.png),  
+                     url(./images/cb_tab_down_b.png);
+   background-repeat: no-repeat,
+                      no-repeat,
+                      repeat-x,
+                      repeat-x;
+   background-position-x: left, 
+                          right, 
+                          left, 
+                          left;
+   background-position-y: top, 
+                          top, 
+                          top, 
+                          bottom; 
+   background-clip: padding-box, 
+                    padding-box, 
+                    content-box, 
+                    content-box;
+   background-color: transparent;
+}
+
+.WindowSuperFancy NAV.CB_Tab_Box UL LI:hover,
+.WindowSuperFancy NAV.CB_Tab_Box UL LI.CB_Tab_Open {
+   cursor: default;
+   border-width: 0px;
+   color: #ffffff;
+   padding: 0px 16px;
+   line-height: 25px;
+   background-image: url(./images/cb_tab_up_l.png), 
+                     url(./images/cb_tab_up_r.png),  
+                     url(./images/cb_tab_up_t.png);
+   background-repeat: no-repeat,
+                      no-repeat,
+                      repeat-x;
+   background-position-x: left, 
+                          right, 
+                          left;
+   background-position-y: top, 
+                          top, 
+                          top; 
+   background-clip: padding-box, 
+                    padding-box, 
+                    content-box;
+   background-color: transparent;
+}
+
+.WindowSuperFancy NAV.CB_Tab_Box UL LI.CB_Tab_Open:hover {
+   cursor: default;
+}
+
+
+
+/* ----------------------------------------------
+              anchor stylesheets
+------------------------------------------------- */
+
+A { 
+   text-decoration: none; 
+   font-weight: none;
+   color: #7b714a; 
+}
+A:link { 
+   text-decoration: none; 
+   font-weight: none;
+   color: #7b714a; 
+}
+A:active { 
+   text-decoration: none; 
+   font-weight: none;
+   color: #7b714a; 
+}
+A:visited { 
+   text-decoration: none; 
+   font-weight: none;
+   color: #6b614a; 
+}
+A:hover { 
+   text-decoration: none; 
+   font-weight: none;
+   color: #7b714a; 
+}
+
+/* ----------------------------------------------
+       button styles on most pages
+------------------------------------------------- */
+.CB_ButtonDisabled,
+.CB_ButtonDisabled:link,
+.CB_ButtonDisabled:visited,
+.CB_ButtonDisabled:active,
+.CB_ButtonDisabled:hover,
+.CB_Button,
+.CB_Button:link,
+.CB_Button:visited,
+.CB_Button:active,
+.CB_Button:hover {
+   height: 23px;
+   width: 48px;
+   border: 0px;
+   text-align: center;
+   padding: 0px;
+   margin: 10px auto;
+   display: block;
+   font-size: 9px;
+   line-height: 21px;
+   text-decoration: none; 
+   font-weight: none;
+   color: #ffffff;
+   opacity: 1.0;
+   cursor: pointer;
+   position: relative;
+}
+
+.CB_Button:hover {
+   background-image: url(./images/button_small_hover.png);
+}
+.CB_Button,
+.CB_Button:link,
+.CB_Button:visited {
+   background-image: url(./images/button_small_up.png);
+}
+.CB_Button:active,
+.CB_ButtonDisabled,
+.CB_ButtonDisabled:link,
+.CB_ButtonDisabled:visited,
+.CB_ButtonDisabled:active,
+.CB_ButtonDisabled:hover {
+   background-image: url(./images/button_small_down.png);
+}
+.CB_ButtonDisabled,
+.CB_ButtonDisabled:link,
+.CB_ButtonDisabled:visited,
+.CB_ButtonDisabled:active,
+.CB_ButtonDisabled:hover {
+   cursor: default;
+}
+
+
+
+.CB_ButtonWrapDisabled,
+.CB_ButtonWrapDisabled:link,
+.CB_ButtonWrapDisabled:visited,
+.CB_ButtonWrapDisabled:active,
+.CB_ButtonWrapDisabled:hover,
+.CB_ButtonWrap,
+.CB_ButtonWrap:link,
+.CB_ButtonWrap:visited,
+.CB_ButtonWrap:active,
+.CB_ButtonWrap:hover {
+   height: 40px;
+   width: 40px;
+   border: 0px ;
+   text-align: center;
+   padding: 0px;
+   margin: 1px;
+   display: inline-block;
+   font-size: 9px;
+   line-height: 40px;
+   text-decoration: none; 
+   font-weight: none;
+   color: #ffffff;
+   opacity: 1.0;
+   cursor: pointer;
+   position: relative;
+}
+
+.CB_ButtonWrap:hover {
+   background-image: url(./images/button_big_hover.png);
+}
+.CB_ButtonWrap,
+.CB_ButtonWrap:link,
+.CB_ButtonWrap:visited {
+   background-image: url(./images/button_big_up.png);
+}
+.CB_ButtonWrap:active,
+.CB_ButtonWrapDisabled,
+.CB_ButtonWrapDisabled:link,
+.CB_ButtonWrapDisabled:visited,
+.CB_ButtonWrapDisabled:active,
+.CB_ButtonWrapDisabled:hover {
+   background-image: url(./images/button_big_down.png);
+}
+.CB_ButtonWrapDisabled,
+.CB_ButtonWrapDisabled:link,
+.CB_ButtonWrapDisabled:visited,
+.CB_ButtonWrapDisabled:active,
+.CB_ButtonWrapDisabled:hover {
+   cursor: default;
+}
+
+
+/* ----------------------------------------------
+          general window stylesheets
+------------------------------------------------- */
+
+.WindowTitleBar {
+   position: absolute;
+   overflow: hidden;
+   top: -11px;
+   left: 6px;
+   right: 6px;
+   height: 21px;
+   font-family: arial;
+   font-size: 9pt;
+   line-height: 21px;
+   text-align: center;   
+   color: #FFFFFF;
+   padding: 0px 13px;
+   background-image: url(./images/rightt.gif), url(./images/leftt.gif), url(./images/midt.gif);
+   background-repeat: no-repeat, no-repeat, repeat-x;
+   background-clip: padding-box, padding-box, content-box;
+   background-position-x: right, left, left;
+   display: block;
+   margin: 0px 0px;    
+}
+.WindowSuperFancy { 
+   position: relative;
+   margin: 50px auto;
+   background-image: url(./images/cb_super_fancy_r.png), 
+                     url(./images/cb_super_fancy_l.png),  
+                     url(./images/cb_super_fancy_bg.png);
+   background-repeat: repeat-y,
+                      repeat-y,
+                      repeat;
+   background-position-x: right, 
+                          left, 
+                          left;
+   background-position-y: top, 
+                          top, 
+                          top;                         
+   padding-top: 10px;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-bottom: 10px;
+   z-index: 0;
+   font-family: arial;
+   font-size: 9pt;
+   color: #FFFFFF;
+   box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.6);  
+   opacity: 0.95;
+   transition: opacity 200ms;
+}
+.WindowSuperFancy:hover { 
+   opacity: 1;
+}
+.WindowSuperFancy:before {
+   content: " ";
+   position: absolute;
+   z-index: -1;
+   left: -4px;
+   right: 0px;
+   top: -20px;
+   bottom: -19px;
+   background-image: url(./images/cb_super_fancy_tl.png), 
+                     url(./images/cb_super_fancy_tr.png), 
+                     url(./images/cb_super_fancy_bl.png), 
+                     url(./images/cb_super_fancy_br.png), 
+                     url(./images/cb_super_fancy_t.png),  
+                     url(./images/cb_super_fancy_b.png);
+   background-repeat: no-repeat,
+                      no-repeat,
+                      no-repeat,
+                      no-repeat,
+                      repeat-x,
+                      repeat-x;
+   background-position-x: left, 
+                          right, 
+                          left, 
+                          right, 
+                          left, 
+                          left;
+   background-position-y: top, 
+                          top, 
+                          bottom, 
+                          bottom, 
+                          top, 
+                          bottom; 
+   background-clip: padding-box, 
+                    padding-box, 
+                    padding-box, 
+                    padding-box, 
+                    content-box, 
+                    content-box;
+   padding-top: 0px;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-bottom: 0px;
+   pointer-events: none;
+}
+
+.WindowSuperFancy .WindowTitleBar {
+   position: absolute;
+   overflow: hidden;
+   top: -10px;
+   height: 30px;
+   font-family: arial;
+   font-size: 9px;
+   line-height: 16px;
+   text-align: center;
+   color: #FFFFFF;
+   padding: 0px 19px;
+   background-image: url(./images/cb_super_fancy_title.png);
+   background-repeat: no-repeat;
+   background-clip: padding-box;
+   background-position-x: left;
+   background-position-y: top;
+   display: block;
+   background-size: 100%;
+   margin: 0 auto;
+   width: 134px;  
+}
+
+.WindowSimple UL LI,
+.WindowSimpleFancy UL LI,
+.WindowComplex UL LI,
+.WindowComplexFancy UL LI,
+.WindowComplexGM UL LI, 
+.WindowSuperFancy UL LI { 
+   list-style-type: none;
+}
+
+.WindowSimple,
+.WindowSimpleFancy,
+.WindowComplex,
+.WindowComplexFancy,
+.WindowComplexGM { 
+   position: relative;
+   margin: 25px auto;
+   background-image: url(./images/light.gif);
+   padding-top: 19px;
+   padding-left: 13px;
+   padding-right: 13px;
+   padding-bottom: 17px;
+   z-index: 0;
+   border-width: 2px;
+   border-style: solid;
+   border-color: rgb(180, 173, 134) rgb(142, 134, 107) rgb(61, 58, 48) rgb(177, 170, 142);
+   font-family: arial;
+   font-size: 9pt;
+   color: #FFFFFF;
+   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
+   opacity: 0.95;
+   transition: opacity 200ms;
+}
+
+.WindowSimple:hover,
+.WindowSimpleFancy:hover,
+.WindowComplex:hover,
+.WindowComplexFancy:hover,
+.WindowComplexGM :hover { 
+   opacity: 1;
+}
+
+.WindowComplex:before,
+.WindowComplexGM:before,
+.WindowComplexFancy:before,
+.WindowSimpleFancy:before,
+.WindowSimple:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    padding: 19px;
+    left: -12px;
+    right: -12px;
+    top: -5px;
+    bottom: -11px;
+    pointer-events: none;
+}
+
+.WindowComplex:before,
+.WindowComplexGM:before,
+.WindowComplexFancy:before {
+   outline-offset: -20px;
+   outline: 2px #40434e solid;
+   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+   background-position-x: left, right, left, right, left;
+   background-position-y: top, top, bottom, bottom, top;
+   background-clip: padding-box, padding-box, padding-box, padding-box, content-box;
+}
+
+.WindowSimpleFancy:before,
+.WindowSimple:before {
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position-x: left, right, left, right;
+    background-position-y: top, top, bottom, bottom;
+    background-clip: padding-box, padding-box, padding-box, padding-box;
+}
+
+.WindowComplex:before,
+.WindowComplexGM:before {
+   background-image: url(./images/cb_simple_window_corner_tl.png), url(./images/cb_simple_window_corner_tr.png), url(./images/cb_simple_window_corner_bl.png), url(./images/cb_simple_window_corner_br.png), url(./images/dark.gif);
+}
+
+.WindowComplexFancy:before {
+   background-image: url(./images/cb_window_corner_tl.png), url(./images/cb_window_corner_tr.png), url(./images/cb_window_corner_bl.png), url(./images/cb_window_corner_br.png), url(./images/dark.gif);
+}
+
+.WindowSimple:before {
+    background-image: url(./images/cb_simple_window_corner_tl.png), url(./images/cb_simple_window_corner_tr.png), url(./images/cb_simple_window_corner_bl.png), url(./images/cb_simple_window_corner_br.png);
+}
+
+.WindowSimpleFancy:before {
+    background-image: url(./images/cb_window_corner_tl.png), url(./images/cb_window_corner_tr.png), url(./images/cb_window_corner_bl.png), url(./images/cb_window_corner_br.png);
+}
+
+
+.WindowNestedTanTitleBar {
+   font-family: arial;
+   font-size: 9pt;
+   text-align: center;   
+   color: #FFFFFF;
+   padding: 0;
+   display: block;
+   margin: 5px 0px;
+}
+
+.WindowNestedTan {
+   padding-top: 5px;
+   padding-left: 8px;
+   padding-right: 8px;
+   padding-bottom: 5px;
+   margin-top: 10px;
+   margin-left: 8px;
+   margin-right: 8px;
+   margin-bottom: 10px;
+   font-family: arial;
+   font-size: 7pt;
+   color: #FFFFFF;
+   text-align: left;
+   vertical-align: top;
+   border: 1px #7b714a dotted;
+   position: relative;
+}
+
+.WindowNestedBlue {
+   background-image: url(./images/dark.gif);
+   border: 1px #6b7194 solid;
+   padding-top: 6px;
+   padding-left: 0px;
+   padding-right: 0px;
+   padding-bottom: 6px;
+   font-family: arial;
+   font-size: 9pt;
+   color: #FFFFFF;
+   margin-top: 0px;
+   margin-left: 0px;
+   margin-right: 0px;
+   margin-bottom: 0px;
+}
+
+
