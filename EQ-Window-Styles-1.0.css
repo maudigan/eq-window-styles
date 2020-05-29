@@ -234,6 +234,87 @@ NAV.CB_Tab_Box UL LI.CB_Tab_Open:hover {
    cursor: default;
 }
 
+DIV.ProgressBar {
+   background-image: url(./images/progress_bar_bottom.png);
+   height: 6px;
+   width: 100px;
+   border: 0px;
+   text-align: center;
+   padding: 0px;
+   margin: 10px auto;
+   display: block;
+   font-size: 6px;
+   line-height: 10px;
+   text-decoration: none;
+   font-weight: normal;
+   color: #ffffff;
+   opacity: 1.0;
+   position: relative;  
+}
+
+DIV.ProgressBar DIV {
+   height: 6px;
+   width: 100%;
+   border: 0px;
+   text-align: center;
+   padding: 0px;
+   display: block;
+   font-size: 6px;
+   line-height: 6px;
+   margin: 0px;
+   text-decoration: none;
+   font-weight: normal;
+   color: #ffffff;
+   opacity: 1.0;
+   position: relative;  
+   background-color: #ff0000;
+   z-index: 1;
+}
+
+DIV.ProgressBar DIV:before {
+   content: " ";
+   background-image: url(./images/progress_bar_top.png);
+   height: 10px;
+   width: 108px;
+   border: 0px;
+   text-align: center;
+   padding: 0px;
+   margin: 0px;
+   display: block;
+   font-size: 6px;
+   line-height: 10px;
+   text-decoration: none;
+   font-weight: normal;
+   color: #ffffff;
+   opacity: 1.0;
+   position: absolute;  
+   top: -2px;
+   left: -4px; 
+   z-index: -1;
+}
+
+A.ProgressBar DIV:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    padding: 19px;
+    left: -12px;
+    right: -12px;
+    top: -5px;
+    bottom: -11px;
+    pointer-events: none;
+   outline-offset: -20px;
+   outline: 2px #40434e solid;
+   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+   background-position-x: left, right, left, right, left;
+   background-position-y: top, top, bottom, bottom, top;
+   background-clip: padding-box, padding-box, padding-box, padding-box, content-box;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position-x: left, right, left, right;
+    background-position-y: top, top, bottom, bottom;
+    background-clip: padding-box, padding-box, padding-box, padding-box;
+   background-image: url(./images/cb_simple_window_corner_tl.png), url(./images/cb_simple_window_corner_tr.png), url(./images/cb_simple_window_corner_bl.png), url(./images/cb_simple_window_corner_br.png), url(./images/dark.gif);
+}
 
 
 /* ----------------------------------------------
